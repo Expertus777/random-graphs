@@ -1,0 +1,86 @@
+* {
+    /*-webkit-user-select: none;*/
+}
+
+.group:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.test{
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example {
+    0%   {text-shadow: 1px -1px 1px #ef5c12;}
+    25%  {text-shadow: 1px -1px 1px #7088ef;}
+    50%  {text-shadow: 1px -1px 1px #acef49;}
+    100% {text-shadow: 1px -1px 1px #ef5c12;}
+}
+
+
+dl{
+    width: 100%;
+}
+dt{
+    float: left;
+    margin-bottom: 10px;
+    clear: left;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+dd{
+    float: left;
+    margin-bottom: 10px;
+}
+
+.graph{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    width: 1000px;
+    height: 100px;
+    position: relative;
+}
+.graph:before{
+    content: ' ';
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 15px 5px;
+    border-color: transparent transparent #696969 transparent;
+
+}
+.graph:after{
+    content: ' ';
+    position: absolute;
+    right: -3px;
+    bottom: -5px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 15px;
+    border-color: transparent transparent transparent #696969;
+}
+
+.point{
+    position: absolute;
+    bottom: 10px;
+    left: 30px;;
+    width: 3px;
+    height: 3px;
+    background: #000;
+    z-index: 1;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
